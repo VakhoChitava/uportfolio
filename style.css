@@ -323,6 +323,14 @@ button:active ,button:focus {
     width: 375px;
     grid-row: 4;
   }
+  .grid6{
+    grid-row: 5;
+  }
+  .grid6-2{
+    grid-row: 5;
+    grid-column: 2;
+    margin-top: 222px
+  }
   .grid7{
     grid-row: ;
     grid-column: 1 / 13;
@@ -354,7 +362,13 @@ button:active ,button:focus {
   .projects img {
     width: 375px;
   }
-
-
-
+  .contacts, .contacts_2 {
+    font-size: 1em;
+  }
+  .contacts img, .contacts_2 img {
+    height: 50px;
+  }
+ .projects{
+   padding: 0;
+ }
 }
