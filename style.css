@@ -290,13 +290,17 @@ button:active ,button:focus {
     }
 }
 @media screen and (max-width: 375px){
+  body {
+  margin: 0;
+  }
   .grid{
+    overflow: hidden;
     display: grid;
   grid-template-columns: repeat(12, 1fr);
   }
   .grid1 {
     grid-row: 1;
-    grid-column: 8 / 13;
+    grid-column: 9 / 13;
   }
   .grid2 {
     z-index: 2;
@@ -319,6 +323,10 @@ button:active ,button:focus {
     width: 375px;
     grid-row: 4;
   }
+  .grid7{
+    grid-row: ;
+    grid-column: 1 / 13;
+  }
   .name{
     font-size: 3em;
   }
@@ -330,11 +338,12 @@ button:active ,button:focus {
     flex-direction: column;
     font-size: 0.5em  
   }
+
   button {
     width: 100px;
   }
   #vahto1 {
-    height: 600px;
+    height: 550px;
   }
   .aboutmebackground{
     width: 100%;
@@ -342,7 +351,9 @@ button:active ,button:focus {
   .aboutme{
     font-size: 1em;
   }
- 
+  .projects img {
+    width: 375px;
+  }
 
 
 
