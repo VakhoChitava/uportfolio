@@ -1,0 +1,291 @@
+/*Сетка*/
+.grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+    }
+   .grid1 {
+    grid-row: 1;
+    grid-column: 11;
+   }
+   .grid2 {
+     min-height: calc(50vh - 62px);
+     grid-row: 2;
+     grid-column: 4 / 9;
+    }
+   .grid3 {
+     min-height: 50vh;
+     grid-row: 3;
+     grid-column: 5 / 9;
+    }
+   .grid4 {
+     grid-row:2 / 4;
+     grid-column: 10 ;
+    }
+   .grid5 {
+     grid-row: 4; 
+     grid-column: 1 / 13;
+    }
+   .grid6{
+     padding-top: 100px;
+     height: 400px;
+     grid-row: 5;
+     grid-column: 2 / 3;
+    }
+    .grid6-2{
+      padding-top: 100px;
+      grid-row: 5;
+      grid-column: 5;
+    }
+    .grid7{
+      grid-row: 6;
+      grid-column: 8 / 11;
+    }
+/*Нужно сделать navigationbar и анимацию загрузки сайта */
+/*Заголовок*/
+.name {
+  
+    color:  rgb(43, 38, 38);
+    font-size: 8em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.466);
+    transition: 0.5s linear;
+    animation-name: name-start;
+    animation-duration: 4s;
+    position: relative;
+}
+/*пришлось создать доп. div что бы паддинг не активировал ховвер анимацию*/
+.namepadding {
+  padding: 300px 0 0 0;
+}
+/*_______________________________*/
+@keyframes name-start {
+    20% {left: -600px;}
+    100% { left: 0;}
+}
+.name:hover {
+    transform: scale(1.02,1.02);
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.466);
+}
+/*Кнопка ночного режима*/
+.moon {
+    display: block;
+    margin-left: 70px;
+    margin-top: -35px;
+    filter: alpha;
+    opacity: 0.90;
+   
+}
+/* Найти скрипт для него и попробовать инверсию цветов */
+.switch {
+  position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+} 
+.slider {
+    display: block;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(43, 38, 38);
+    -webkit-transition: .4s;
+    transition: .4s;
+    width: 60px;
+    height: 34px;
+} 
+.slider:before {
+    display: block;
+    position: relative;
+    content: " ";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: -4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  input:checked + .slider {
+    background-color: #eeeeee;
+}
+  input:checked + .slider:before {
+    background-color: rgb(43, 38, 38);
+}
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  .slider.round {
+    border-radius: 34px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/*Меню выбора*/
+  .menu {
+    display: flex;
+    animation-name: menu-start;
+    animation-duration: 2s;
+    position: relative;
+    
+}
+@keyframes menu-start {
+    20% {left: -600px;}
+    100% { left: 0;}
+}
+button {
+    padding: 5px 0 5px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 5px;
+    height: 60px;
+    width: 250px;
+    border: none;
+    background: transparent;
+    font-size: 3em;
+    color:  rgb(43, 38, 38);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.466);
+    transition: 0.6s ;
+}
+button:hover {
+transform: translate(-5px, -5px); 
+background: rgba(0, 0, 0, 0.808);
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.466);
+color: white;
+}
+button:active ,button:focus {
+    outline: none;
+}
+/*Моя фотография справа*/
+/* Добавить PNG Для сафари, заменить изображение */
+.photo {
+  position: relative;
+  height: 100%;
+}
+.photo img {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+
+}
+/*Текст обо мне*/
+/* Написать текст  */
+.aboutmebackground{
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+  background: rgb(43, 38, 38); 
+  margin-top: -4px;
+}
+.aboutme{
+  padding: 30px 15px 30px 0;
+  font-size: 1.7em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  background: rgb(43, 38, 38);
+  
+}
+/*Контакты*/
+/* Подобрать и редактировать иконки контактов под одинаковый размер/формат/стиль */
+.contacts{
+  position: absolute;
+  font-size: 2em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 20px;
+}
+  .telegram{ 
+    display: block;
+    padding-bottom: 50px;
+    text-decoration: none;
+    color: rgb(43, 38, 38);;
+    transition: 0.5s;
+  }
+  .telegram:hover{
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.466);
+  }
+  .telegram img{
+    padding-right: 50px;
+  }
+  .contacts img{
+  margin-bottom: -30px;
+  }
+  .phonenumber {
+    display: block;
+    text-decoration: none;
+    color: rgb(43, 38, 38);
+    padding-bottom: 50px;
+  }
+  .phonenumber img {
+    padding-right: 50px;
+  }
+
+  .phonenumber:hover {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.466);
+  }
+  .mail {
+    padding-bottom: 50px;
+    text-decoration: none;
+    color: rgb(43, 38, 38);
+  }
+  .mail img {
+    padding-right: 50px;
+  }
+.contacts_2{
+  position: absolute;
+  font-size: 2em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 20px;
+}
+  .contacts_2 img{
+    margin-bottom: -30px;
+  }
+  .linkedin {
+    text-decoration: none;
+    color: rgb(43, 38, 38);;
+    transition: 0.5s;
+  }
+  .linkedin:hover{
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.466);
+  } 
+  .linkedin img{
+    padding-right: 50px;
+  }
+/* Проекты */
+.projects{
+  padding: 10px;
+}
+.projects img{
+  box-shadow:  2px 2px 5px rgba(0, 0, 0, 0.466);
+}
+
+
+/* Сделать медиа стили  */
+@media (max-width: 1850px){
+.grid2{
+  min-height: calc(50vh - 62px);
+  grid-row: 2;
+  grid-column: 2 / 11;
+  }
+.grid3 {
+  min-height: 50vh;
+  grid-row: 3;
+  grid-column: 4 / 9;
+  }
+}
+@media (max-width: 1400px){
+  .grid3 {
+    min-height: 50vh;
+    grid-row: 3;
+    grid-column: 2 / 9;
+    }
+}
