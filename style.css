@@ -397,7 +397,10 @@ button:active ,button:focus {
  }
 }
 @media screen and (max-width: 768px){
-.grid1 {
+.grid{
+  overflow: hidden;
+}
+  .grid1 {
   grid-row: 1;
   grid-column: 2 / 4;
 } 
@@ -442,5 +445,4 @@ button:active ,button:focus {
 .projects{
   padding: 0;
 }
-
-
+}
