@@ -396,7 +396,7 @@ button:active ,button:focus {
    padding: 0;
  }
 }
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px){
 .grid{
   overflow: hidden;
 }
