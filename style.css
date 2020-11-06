@@ -41,8 +41,10 @@ body{
       grid-column: 5;
     }
     .grid7{
+      margin-left: auto;
+      margin-right: auto;
       grid-row: 6;
-      grid-column: 8 / 11;
+      grid-column: 1 / 13;
     }
 /*Нужно сделать navigationbar и анимацию загрузки сайта */
 /*Заголовок*/
@@ -263,6 +265,15 @@ button:active ,button:focus {
   .linkedin img{
     padding-right: 50px;
   }
+  .CV {
+    display: block;
+    padding-top: 50px;
+    text-decoration: none;
+    color: rgb(43, 38, 38);
+  }
+  .CV img {
+    padding-right: 50px;
+  }
 /* Проекты */
 .projects{
   padding: 10px;
@@ -316,6 +327,8 @@ button:active ,button:focus {
     margin-top: 222px
   }
   .grid7{
+    margin-left: auto;
+    margin-right: auto;
     grid-column: 1 / 13;
   }
   .slider{
@@ -361,7 +374,10 @@ button:active ,button:focus {
   .aboutme{
     font-size: 1em;
   }
-  .projects img {
+  .projects{
+   padding: 0;
+ } 
+ .projects img {
     width: 375px;
   }
   .contacts, .contacts_2 {
@@ -370,9 +386,7 @@ button:active ,button:focus {
   .contacts img, .contacts_2 img {
     height: 50px;
   }
- .projects{
-   padding: 0;
- }
+
 }
  @media screen and (min-width: 414px){
   .grid{
@@ -476,10 +490,11 @@ button:active ,button:focus {
   margin-top: -122px;
 }
 .grid7{
-  margin-top: 222px 0 0 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 640px;
   grid-row: 7;
-  grid-column: 2 / 12;
+  grid-column: 1 / 13;
 }  
 .name{
   font-size: 4em;
